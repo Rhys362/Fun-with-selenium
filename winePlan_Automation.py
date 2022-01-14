@@ -20,9 +20,9 @@ sleep(2)
 cookie_button = browser.find_element_by_xpath("//button[text()='Accept Cookies']")
 cookie_button.click()
 
-#hit login
 sleep(2)
 
+#hit login
 #probably bad practice to use xpath in this way but for my own use it is easy to maintain if site is changed
 login_button = browser.find_element_by_xpath("/html/body/div[4]/header/div[4]/div/div[5]/div[1]/div/div[2]/div[1]/span/a")
 login_button.click()
