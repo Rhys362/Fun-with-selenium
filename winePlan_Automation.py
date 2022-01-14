@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 
 #open in headless mode
 options = Options()
-options.headless = True
+options.headless = False
 browser = webdriver.Firefox(options=options)
 
 browser.get('https://www.sundaytimeswineclub.co.uk/')
@@ -20,9 +20,9 @@ sleep(2)
 cookie_button = browser.find_element_by_xpath("//button[text()='Accept Cookies']")
 cookie_button.click()
 
+#hit login
 sleep(2)
 
-#hit login
 #probably bad practice to use xpath in this way but for my own use it is easy to maintain if site is changed
 login_button = browser.find_element_by_xpath("/html/body/div[4]/header/div[4]/div/div[5]/div[1]/div/div[2]/div[1]/span/a")
 login_button.click()
@@ -44,7 +44,9 @@ accept_button.click()
 sleep(2)
 
 #navigate to account/wine plan
-browser.find_element_by_id("user-logged-in").click()
+element = WebDriverWait(browser, 10).until(
+EC.presence_of_element_located((By.ID, "user-logged-in")))
+element.click()
 browser.find_element_by_link_text('Wine Plans').click()
 
 #find button with push back id
@@ -64,4 +66,3 @@ actions.send_keys(Keys.ENTER * n)
 actions.perform()
 
 #exit
-browser.quit()
