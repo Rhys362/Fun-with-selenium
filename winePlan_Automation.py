@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 
 #open in headless mode
 options = Options()
-options.headless = False
+options.headless = True
 browser = webdriver.Firefox(options=options)
 
 browser.get('https://www.sundaytimeswineclub.co.uk/')
