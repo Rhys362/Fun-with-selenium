@@ -1,0 +1,2 @@
+# Fun-with-selenium
+Silly little automation script I made to learn python with selenium. I often forget to push back the delivery date of a wine subscription service my wife and I signed up to and we get billed unexpectedly for something I meant to cancel. I run this script once a month with Z-Cron and it pushes the date back 4 weeks for me. Pretty useless I know but useful in my very specific case and to me :)
