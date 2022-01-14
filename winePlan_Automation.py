@@ -66,3 +66,4 @@ actions.send_keys(Keys.ENTER * n)
 actions.perform()
 
 #exit
+browser.quit()
