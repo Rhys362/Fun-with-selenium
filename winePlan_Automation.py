@@ -44,8 +44,7 @@ accept_button.click()
 sleep(2)
 
 #navigate to account/wine plan
-#same again regarding xpath, don't think it should be done like this but for my purposes it works. Will fix if breaks. For future could add an alert which notifies me if script fails due to page update?
-browser.find_element_by_xpath("/html/body/div[4]/header/div[4]/div/div[5]/div[1]/div/div[2]/div[2]/span[1]/a").click()
+browser.find_element_by_id("user-logged-in").click()
 browser.find_element_by_link_text('Wine Plans').click()
 
 #find button with push back id
